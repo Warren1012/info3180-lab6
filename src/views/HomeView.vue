@@ -3,10 +3,10 @@ import NewsList from '@/components/NewsList.vue'
 export default {
     data() {
         return {
-            message: "Hello World! Welcome to VueJS"
+            message: "Hello World! Welcome to VueJS"   
         };
     },
-    components: { NewsList }
+  components: { NewsList } 
 }
 </script>
 
@@ -21,5 +21,5 @@ export default {
 </template>
 
 <style>
-/* Add any component specific styles here */
+
 </style>
