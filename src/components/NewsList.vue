@@ -3,16 +3,23 @@
 <ul >
   <div class="collection">
     <li v-for="article in articles">
+    <div class="info">
       <div  class="photo">
-        <img :src="article.urlToImage">
+          <img :src="article.urlToImage">
+        </div>
+      <div class="text">
+        <div class="title">
+          {{article.title }}
+        </div>
+        <div class="descript">
+          {{article.description}}
+        </div>
       </div>
-      <div class="info">
-        {{article.title }}
-        {{article.description}}
-      </div>
+    </div>
+     
    </li>
   </div> 
- </ul> 
+</ul> 
 <form submit.prevent="searchNews" class="d-flex flex-column justify-content-center">
     <div class="input-group mx-sm-3 mb-2"> 
       <label class="visually-hidden" for="search">Search</label>
@@ -69,32 +76,27 @@ self.searchTerm + '&language=en', {
 
 <style>
   img{
-  width:75%;
+  width:350px;
+  height: 250px;
 }
 ul{
   list-style: none;
 }
-*{
-  box-sizing: border-box;
-}
 
-.collection {
+
+.collection 
+{
   display: grid;
-  grid-auto-columns: max-content;
-  grid-auto-flow: dense;
-  grid-auto-rows: minmax(100px, auto);
   grid-gap: 25px;
   grid-template-columns: repeat(3, 1fr);
-  
-  margin: 60px auto;
-  max-width: 800px;
-  border: 1pt solid black;
+}
+.info{
+   border-style: groove;
+   border-color:grey ;
+   border-bottom: 6px solid limegreen ;
+}
+.text{
+  padding-top:10px;
 }
 
-.info{
-  padding-top: 10px;
-}
-.photo{
-  padding-top: 10px;
-}
 </style>
